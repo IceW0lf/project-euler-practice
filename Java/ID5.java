@@ -56,7 +56,7 @@ public class ID5 {
     public static Long calcLowestCommonMultiple_Recursive(Integer limit) {
         Long lcm = 1L;
 
-        for (long i = 1; i <= limit; i++) {
+        for (long i = 2; i <= limit; i++) {
             lcm = calcLCM(i, lcm);
         }
 
@@ -64,10 +64,6 @@ public class ID5 {
     }
 
     private static Long calcLCM(Long x, Long y) {
-        return x * y / calcGCD(x, y);
-    }
-
-    private static Long calcGCD(Long x, Long y) {
-        return BigInteger.valueOf(x).gcd(BigInteger.valueOf(y)).longValue();
+        return x * y / BigInteger.valueOf(x).gcd(BigInteger.valueOf(y)).longValue();
     }
 }
