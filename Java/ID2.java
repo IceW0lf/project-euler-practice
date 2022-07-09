@@ -17,10 +17,10 @@ public class ID2 {
     }
 
     public static Integer calcSum(int limit) {
-        int sum = 0;
-        int f0 = 0;
-        int f1 = 1;
-        int temp;
+        Integer sum = 0;
+        Integer f0 = 0;
+        Integer f1 = 1;
+        Integer temp;
 
         while (f0 + f1 < limit) {
             temp = f1;
