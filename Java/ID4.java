@@ -43,6 +43,6 @@ public class ID4 {
             num /= 10;
         }
 
-        return sum == number ? true : false;
+        return sum.equals(number) ? true : false;
     }
 }
