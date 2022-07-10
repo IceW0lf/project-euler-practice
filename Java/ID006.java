@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID6 {
+public class ID006 {
 
     public static void main(String[] args) {
         System.out.println(calc(10));

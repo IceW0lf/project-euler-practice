@@ -6,7 +6,7 @@ package Java;
 
 import java.math.BigInteger;
 
-public class ID5 {
+public class ID005 {
 
     public static void main(String[] args) {
         // iterative solution

@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID4 {
+public class ID004 {
 
     public static void main(String[] args) {
         System.out.println(calcLargestPalindrome(2));

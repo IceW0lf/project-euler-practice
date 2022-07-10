@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID7 {
+public class ID007 {
 
     public static void main(String[] args) {
         System.out.println(calcPrimeByPosition(6));

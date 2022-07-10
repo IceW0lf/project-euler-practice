@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID2 {
+public class ID002 {
 
     public static void main(String[] args) {
         System.out.println(calcSum(100));

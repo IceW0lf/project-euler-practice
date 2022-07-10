@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID3 {
+public class ID003 {
 
     public static void main(String[] args) {
         System.out.println(calcLargestPrimeFactor(13195L));

@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID10 {
+public class ID010 {
     
     public static void main(String[] args) {
         System.out.println(calcSumOfPrimesBelow(10));

@@ -4,7 +4,7 @@
 
 package Java;
 
-public class ID1 {
+public class ID001 {
 
     public static void main(String[] args) {
         System.out.println(calcSum(10));
