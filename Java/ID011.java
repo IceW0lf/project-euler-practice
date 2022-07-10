@@ -28,10 +28,11 @@ public class ID011 {
         { 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48}};
 
     public static void main(String[] args) {
-        System.out.println(calcProduct(4));
+        System.out.println(calcProductSingleLoop(4));
+        System.out.println(calcProductIndividualLoops());
     }
 
-    private static Integer calcProduct(Integer adjacentNumberCount) {
+    public static Integer calcProductSingleLoop(Integer adjacentNumberCount) {
         Integer max = 0;
         Integer product;
 
@@ -40,13 +41,11 @@ public class ID011 {
                 if (i <= GRID.length - adjacentNumberCount) {
                     // vertical downward
                     product = GRID[i][j] * GRID[i + 1][j] * GRID[i + 2][j] * GRID[i + 3][j];
-
                     max = Math.max(product, max);
 
                     if (j <= GRID[i].length - adjacentNumberCount) {
                         // diagonal downward to the right
                         product = GRID[i][j] * GRID[i + 1][j + 1] * GRID[i + 2][j + 2] * GRID[i + 3][j + 3];
-
                         max = Math.max(product, max);
                     }
                 }
@@ -54,13 +53,11 @@ public class ID011 {
                 if (j <= GRID[i].length - adjacentNumberCount) {
                     // horizontal to the right
                     product = GRID[i][j] * GRID[i][j + 1] * GRID[i][j + 2] * GRID[i][j + 3];
-
                     max = Math.max(product, max);
                     
                     if (i >= adjacentNumberCount - 1) {
                         // diagonal upward to the right
                         product = GRID[i][j] * GRID[i - 1][j + 1] * GRID[i - 2][j + 2] * GRID[i - 3][j + 3];
-
                         max = Math.max(product, max);
                     }
                 }
@@ -69,4 +66,43 @@ public class ID011 {
 
         return max;
     }   
+
+    public static Integer calcProductIndividualLoops() {
+        Integer max = 0;
+        Integer product;
+
+        // vertical downward
+        for (int i = 0; i < 17; i++) {
+            for (int j = 0; j < 20; j++) {
+                product = GRID[i][j] * GRID[i + 1][j] * GRID[i + 2][j] * GRID[i + 3][j];
+                max = Math.max(product, max);
+            }
+        }
+
+        // diagonal downward to the right
+        for (int i = 0; i < 17; i++) {
+            for (int j = 0; j < 17; j++) {
+                product = GRID[i][j] * GRID[i + 1][j + 1] * GRID[i + 2][j + 2] * GRID[i + 3][j + 3];
+                max = Math.max(product, max);
+            }
+        }
+
+        // horizontal to the right
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 17; j++) {
+                product = GRID[i][j] * GRID[i][j + 1] * GRID[i][j + 2] * GRID[i][j + 3];
+                max = Math.max(product, max);
+            }
+        }
+
+        // diagonal upward to the right
+        for (int i = 3; i < 20; i++) {
+            for (int j = 0; j < 17; j++) {
+                product = GRID[i][j] * GRID[i - 1][j + 1] * GRID[i - 2][j + 2] * GRID[i - 3][j + 3];
+                max = Math.max(product, max);
+            }
+        }
+
+        return max;
+    }
 }
