@@ -7,7 +7,7 @@ package Java;
 public class MethodCollection {
 
     public static Boolean primeCheck(Integer primeCandidate) {
-        Integer flooredSqrtOfPrimeCandidate = (int) Math.floor(Math.sqrt(primeCandidate));
+        Integer flooredSqrt = flooredSqrtOf(primeCandidate);
 
         if (primeCandidate == 2) {
             return true;
@@ -17,12 +17,16 @@ public class MethodCollection {
             return false;
         }
 
-        for (int i = 3; i <= flooredSqrtOfPrimeCandidate; i += 2) {
+        for (int i = 3; i <= flooredSqrt; i += 2) {
             if (primeCandidate % i == 0) {
                 return false;
             }
         }
 
         return true;
+    }
+
+    public static Integer flooredSqrtOf(Integer number) {
+        return (int) Math.floor(Math.sqrt(number));
     }
 }
