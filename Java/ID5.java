@@ -29,16 +29,15 @@ public class ID5 {
         while (true) {
             for (int i = 1; i <= limit; i++) {
                 if (number % i == 0) {
-                    check += 1;
+                    check++;
                 } else {
+                    check = 0;
                     break;
                 }
             }
 
             if (check.equals(limit)) {
                 return number;
-            } else {
-                check = 0;
             }
 
             number++;
