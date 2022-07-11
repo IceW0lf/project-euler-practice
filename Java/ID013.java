@@ -12,7 +12,7 @@ public class ID013 {
         System.out.println(digits(0, 10));
     }
 
-    private static String digits(Integer startIndex, Integer endIndex) {
+    public static String digits(Integer startIndex, Integer endIndex) {
         BigInteger sum = BigInteger.ZERO;
 
         for (String s : ARRAY) {

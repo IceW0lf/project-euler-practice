@@ -28,11 +28,11 @@ public class ID011 {
         { 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48}};
 
     public static void main(String[] args) {
-        System.out.println(calcProductSingleLoop(4));
-        System.out.println(calcProductIndividualLoops());
+        System.out.println(calcProduct_SingleLoop(4));
+        System.out.println(calcProduct_IndividualLoops());
     }
 
-    public static Integer calcProductSingleLoop(Integer adjacentNumberCount) {
+    public static Integer calcProduct_SingleLoop(Integer adjacentNumberCount) {
         Integer max = 0;
         Integer product;
 
@@ -67,7 +67,7 @@ public class ID011 {
         return max;
     }   
 
-    public static Integer calcProductIndividualLoops() {
+    public static Integer calcProduct_IndividualLoops() {
         Integer max = 0;
         Integer product;
 
