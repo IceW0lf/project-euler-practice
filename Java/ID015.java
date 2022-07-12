@@ -17,6 +17,11 @@ public class ID015 {
         Integer n = 2 * gridSize;
         Integer k = gridSize;
 
+        /*
+         * Reaching the lower right corner of the grid requires making n many
+         * right and down moves, in any order. (e.g. 2*20 = 40 moves)
+         * There are exactly "n over k" many different paths.
+         */
         return MethodCollection.binomialCoefficient(n, k);
     }
 }
