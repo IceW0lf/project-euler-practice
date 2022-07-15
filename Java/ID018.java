@@ -11,7 +11,7 @@ public class ID018 {
         System.out.println(calcMaxPathValue(triangleTwo));
     }
 
-    private static Integer calcMaxPathValue(Integer[][] array) {
+    public static Integer calcMaxPathValue(Integer[][] array) {
         for (int i = array.length - 2; i >= 0; i--) {
             for (int j = 0; j < array[i].length; j++) {
                 array[i][j] += Math.max(array[i + 1][j], array[i + 1][j + 1]);
