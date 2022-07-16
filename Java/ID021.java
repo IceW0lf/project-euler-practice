@@ -14,21 +14,9 @@ public class ID021 {
         Integer sum = 0;
         
         for (int i = 0; i < limit; i++) {
-            Integer j = calcSumProperDivisors(i);
+            Integer j = MethodCollection.calcSumProperDivisors(i);
 
-            if (i != j && i == calcSumProperDivisors(j)) {
-                sum += i;
-            }
-        }
-
-        return sum;
-    }
-
-    private static Integer calcSumProperDivisors(Integer number) {
-        Integer sum = 0;
-        
-        for (int i = 1; i < number; i++) {
-            if (number % i == 0) {
+            if (i != j && i == MethodCollection.calcSumProperDivisors(j)) {
                 sum += i;
             }
         }

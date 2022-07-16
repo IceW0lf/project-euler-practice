@@ -47,4 +47,16 @@ public class MethodCollection {
 
         return result;
     }
+
+    public static Integer calcSumProperDivisors(Integer number) {
+        Integer sum = 0;
+        
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
 }
