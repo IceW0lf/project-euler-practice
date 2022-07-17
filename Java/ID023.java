@@ -34,7 +34,7 @@ public class ID023 {
     }
 
     // for each abundant number: Is (number - abundant number) also abundant?
-    // true <=> number is sum of two abundant numbers
+    // true => number is sum of two abundant numbers
     private static Boolean isSumOfTwoAbundants(Integer number) {
         for (int i = 0; i <= number; i++) {
             if (numberIsAbundant[i] && numberIsAbundant[number - i]) {
